@@ -1,0 +1,22 @@
+{
+    "name": "gent/symfony-db-commands",
+    "authors": [
+        {
+            "name": "Arne Van den Bogaert",
+            "email": "arne.vandenbogaert@outlook.com"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "3.*|^2.8"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "1.0-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Gent\\DbCommandsBundle\\": "src"
+        }
+    }
+}
