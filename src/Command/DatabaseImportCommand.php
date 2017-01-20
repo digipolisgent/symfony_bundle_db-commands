@@ -14,6 +14,7 @@ class DatabaseImportCommand extends ContainerAwareCommand
     {
         $this
             ->setName('db:import')
+            ->setAliases(['ctrl:db:import'])
             ->setDescription('import a dump into the configured mysql database')
             ->addArgument(
                 'file',
