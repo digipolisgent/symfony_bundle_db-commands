@@ -2,6 +2,8 @@
 
 namespace Gent\DbCommandsBundle;
 
-class DbCommandsBundle
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+class DbCommandsBundle extends Bundle
 {
 }
