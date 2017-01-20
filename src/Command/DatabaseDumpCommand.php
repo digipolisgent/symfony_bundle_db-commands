@@ -13,6 +13,7 @@ class DatabaseDumpCommand extends ContainerAwareCommand
     {
         $this
             ->setName('db:dump')
+            ->setAliases(['ctrl:db:dump'])
             ->setDescription('dump the configured mysql database')
             ->addArgument(
                 'output',
