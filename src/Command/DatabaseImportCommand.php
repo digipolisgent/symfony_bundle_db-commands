@@ -35,11 +35,9 @@ class DatabaseImportCommand extends ContainerAwareCommand
         $c = $this->getContainer();
 
         $file = $input->getArgument('file');
-        if (substr($file, -3) === '.gz') {
-            $gzip = true;
-        }
+        $gzip = ((bool) $input->getOption('gzip')) || (substr($file, -3) === '.gz');
 
-        if ($input->getOption('gzip')) {
+        if ($gzip) {
             $file = "gzip -dc < $file";
             $command = sprintf(
                 '%s | mysql --host=%s --user=%s --password=%s %s',
